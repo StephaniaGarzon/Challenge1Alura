@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Reto1</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1><img id="logo" src="imagenes/Logo.svg" /><span class="d-none d-md-initial">Reto 1 | Oracle Next Education</span></h1>
+</header>
+<div id="wrapper">
+<!--texto a cifrar/descifrar-->
+  <div class="principal">
+    <div>
+      <textarea id="entrada" class="text-entrada" placeholder="Ingrese el texto aquí" oninput="uiVerificar()"></textarea>
+    </div>
+    <div class="advertencia">
+      <span class="icon-info"></span><small>Solo letras minúsculas y sin acentos</small>
+    </div>
+    <div class="botones">
+      <input type="button" class="boton boton-azul"  value="Codificar" onclick="uiCodificar()"/>
+      <input type="button" class="boton" value="Decodificar" onclick="uiDecodificar()"/>
+    </div>
+  </div>
+    <!--texto cifrado/descifrado-->
+  <div class="sec-salida">
+    <div class="sec-salida-info">
+      <img class="d-none d-md-initial" id="muñeco" src="imagenes/Muñeco.svg" />
+      <p class="h3">Ningún mensaje fue encontrado</p>
+      <p><small>Ingresa el texto que desees codificar o decodificar</small></p>
+    </div>
+    <p id="salida"></p>
+    <center>
+    <input type="button" class="boton" id="btn-copiar" value="Copiar" onclick="uiCopiar()"/>
+    </center>
+  </div>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
